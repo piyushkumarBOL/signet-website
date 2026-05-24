@@ -1,0 +1,42 @@
+<div class="header-backdrop" [class.active]="isMenuOpen" (click)="closeMenu()"></div>
+<header class="header" [class.menu-open]="isMenuOpen">
+  <div class="header-content">
+    <div class="logo">
+      <a routerLink="/" class="logo-text">SIGNET CORPORATE SERVICES</a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About Us</a></li>
+        <li><a routerLink="/solutions" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Solutions</a></li>
+        <li><a routerLink="/why-signet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Why Signet</a></li>
+        <li><a routerLink="/clients" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Our Clients</a></li>
+        <li><a routerLink="/careers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Careers</a></li>
+      </ul>
+    </nav>
+    <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="header-cta">Contact Us</a>
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" [class.active]="isMenuOpen">
+    <div class="close-nav" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M3.92706 1.21177C3.17725 0.461962 1.96158 0.461963 1.21177 1.21177C0.461963 1.96158 0.461962 3.17725 1.21177 3.92706L5.2847 7.99999L1.21177 12.0729C0.461962 12.8227 0.461963 14.0384 1.21177 14.7882C1.96158 15.538 3.17725 15.538 3.92706 14.7882L7.99999 10.7153L12.0729 14.7882C12.8227 15.538 14.0384 15.538 14.7882 14.7882C15.538 14.0384 15.538 12.8227 14.7882 12.0729L10.7153 7.99999L14.7882 3.92706C15.538 3.17725 15.538 1.96158 14.7882 1.21177C14.0384 0.461964 12.8227 0.461963 12.0729 1.21177L7.99999 5.2847L3.92706 1.21177Z"
+          fill="white" />
+      </svg>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">About Us</a></li>
+      <li><a routerLink="/solutions" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Solutions</a></li>
+      <li><a routerLink="/why-signet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Why Signet</a></li>
+      <li><a routerLink="/clients" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Our Clients</a></li>
+      <li><a routerLink="/careers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Careers</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="btn-contact" (click)="closeMenu()">Contact Us</a></li>
+    </ul>
+  </div>
+</header>

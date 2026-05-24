@@ -1,0 +1,34 @@
+@import './mediaqueries.less';
+
+.website-text-style(@color, @fontFamily, @fontSize, @lineHeight) {
+    color: @color;
+    font-family: @fontFamily, ProximaNova-Fallback, 'Helvetica Neue', Arial, sans-serif;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+}
+
+.content-max-width() {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+
+    @media @mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.section-horizontal-padding() {
+    padding-left: max(32px, calc(50% - 720px));
+    padding-right: max(32px, calc(50% - 720px));
+    box-sizing: border-box;
+
+    @media @mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
